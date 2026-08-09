@@ -1,6 +1,8 @@
-﻿# Python Calculator 
+# Python Calculator 
 
 A feature-rich calculator implementation in Python using Object-Oriented Programming (OOP) concepts. Includes both basic and scientific calculator functionalities with a clean, interactive interface.
+
+![Calculator GUI Screenshot](screenshot.png)
 
 ## Features 
 
@@ -19,7 +21,7 @@ A feature-rich calculator implementation in Python using Object-Oriented Program
 - **Memory Operations**: Store, recall, add to, subtract from memory
 - **Angle Mode**: Switch between radians and degrees
 
-## Installation 🚀
+## Installation & Setup 🚀
 
 1. **Clone the repository**:
    ```bash
@@ -27,18 +29,33 @@ A feature-rich calculator implementation in Python using Object-Oriented Program
    cd Py-Calculator
    ```
 
-2. **Run the calculator**:
+2. **Install the modern GUI dependency**:
    ```powershell
-   python .\Calculator.py
+   pip install customtkinter
    ```
+
+3. **Run the calculator**:
+   - **GUI Desktop Version (Recommended)**:
+     ```powershell
+     python .\CalculatorGUI.py
+     ```
+   - **CLI Text-based Version**:
+     ```powershell
+     python .\Calculator.py
+     ```
 
 ## Usage
 
-Run the script from the repository folder:
+Run the application of your choice from the repository folder:
 
-```powershell
-python .\Calculator.py
-```
+- **For the Desktop GUI App**:
+  ```powershell
+  python .\CalculatorGUI.py
+  ```
+- **For the CLI Version**:
+  ```powershell
+  python .\Calculator.py
+  ```
 
 ### Interactive Mode
 - **Operations**: `+`, `-`, `*`, `/`
