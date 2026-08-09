@@ -2,7 +2,7 @@
 
 A feature-rich calculator implementation in Python using Object-Oriented Programming (OOP) concepts. Includes both basic and scientific calculator functionalities with a clean, interactive interface.
 
-![Calculator GUI Screenshot](screenshot.png)
+![Calculator GUI Screenshot](https://github.com/reezmahanan/Py-Calculator/blob/main/Screenshot.png)
 
 ## Features 
 
