@@ -1,85 +1,93 @@
-# Python Calculator 
+# 🧮 Py-Calculator
 
-A feature-rich calculator implementation in Python using Object-Oriented Programming (OOP) concepts. Includes both basic and scientific calculator functionalities with a clean, interactive interface.
+A modern, highly aesthetic, and feature-rich Python desktop calculator built using Object-Oriented Programming (OOP) principles. It offers both a **minimalist CLI interface** and a **premium, interactive Desktop GUI** powered by CustomTkinter.
+
+---
+
+## 🎨 Preview
 
 ![Calculator GUI Screenshot](https://github.com/reezmahanan/Py-Calculator/blob/main/Screenshot.png)
 
-## Features 
+---
 
-### Basic Calculator
-- **Arithmetic Operations**: Addition, Subtraction, Multiplication, Division
-- **Advanced Functions**: 
-  - Percentage calculations
-  - Sign toggle ()
-  - Square and Square root
-  - Backspace and Clear functions
-- **Calculation History**: Keeps track of all calculations
-- **Error Handling**: Graceful handling of division by zero and invalid expressions
+## ✨ Features
 
-### Scientific Calculator
-- **Trigonometric Functions**: sin, cos, tan (with radians/degrees toggle)
-- **Memory Operations**: Store, recall, add to, subtract from memory
-- **Angle Mode**: Switch between radians and degrees
+### 🖥️ Desktop GUI (Recommended)
+- **Aesthetic Dark & Light Themes**: Sleek, glassmorphic layout inspired by modern operating systems, with a toggle switch (☀️/🌙).
+- **Dynamic Layouts**: Easily switch between **Basic** and **Scientific** modes from a segmented tab. The window and layout resize dynamically.
+- **Interactive Micro-Animations**: Buttons briefly highlight/flash upon mouse clicks and physical keyboard presses.
+- **Scrollable History Sidebar**: Slide-out panel that tracks your calculations. Clicking on a history card loads its expression back into the display.
+- **Full Keyboard Integration**: Supports desktop execution via numeric keys, decimal points, standard operators, bracket keys, Backspace, Escape, and Enter.
+- **Status Indicators**: Clean labels displaying active Angle Mode (`RAD`/`DEG`) and current memory values (`M = ...`).
 
-## Installation & Setup 🚀
+### 📚 Scientific Capabilities
+- **Trigonometric Functions**: `sin`, `cos`, and `tan` supporting both degrees and radians.
+- **Memory Operations**: `MC` (Clear), `MR` (Recall), `MS` (Store), `M+` (Add), and `M-` (Subtract).
+- **Brackets**: Supports parentheses `(` and `)` to evaluate complex algebraic expressions.
+- **Constants & Operators**: Built-in inputs for Pi (`π`), Euler's number (`e`), squaring (`x²`), square root (`√`), sign toggle (`±`), and percentages (`%`).
+- **Error Resilience**: Intercepts syntax errors and division by zero exceptions, presenting warning alerts without disrupting input flow.
 
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/reezmahanan/Py-Calculator.git
-   cd Py-Calculator
-   ```
+---
 
-2. **Install the modern GUI dependency**:
-   ```powershell
-   pip install customtkinter
-   ```
+## 📂 Project Structure
 
-3. **Run the calculator**:
-   - **GUI Desktop Version (Recommended)**:
-     ```powershell
-     python .\CalculatorGUI.py
-     ```
-   - **CLI Text-based Version**:
-     ```powershell
-     python .\Calculator.py
-     ```
+```text
+Py-Calculator/
+│
+├── .venv/                  # Local Python Virtual Environment
+├── Calculator.py           # Core logic (Calculator, ScientificCalculator & CLI UI)
+├── CalculatorGUI.py        # Desktop GUI implementation (CustomTkinter App)
+├── Screenshot.png          # Visual representation of the GUI
+└── README.md               # Project documentation
+```
 
-## Usage
+---
 
-Run the application of your choice from the repository folder:
+## 🚀 Getting Started
 
-- **For the Desktop GUI App**:
+### 1. Clone the Repository
+```bash
+git clone https://github.com/reezmahanan/Py-Calculator.git
+cd Py-Calculator
+```
+
+### 2. Set Up & Install Dependencies
+It is highly recommended to install the dependencies inside your project's virtual environment (`.venv`):
+
+```powershell
+# Activate your virtual environment (Windows PowerShell)
+.\.venv\Scripts\Activate.ps1
+
+# Install CustomTkinter
+pip install customtkinter
+```
+
+### 3. Running the Application
+
+- **Run the Desktop GUI (Recommended)**:
   ```powershell
   python .\CalculatorGUI.py
   ```
-- **For the CLI Version**:
+
+- **Run the CLI Interface**:
   ```powershell
   python .\Calculator.py
   ```
 
-### Interactive Mode
-- **Operations**: `+`, `-`, `*`, `/`
-- **Special Keys**:
-  - `C`: Clear all
-  - `CE`: Clear entry
-  - `BS`: Backspace
-  - `%`: Percentage
-  - ``: Toggle sign
-  - `=`: Calculate current expression
-- Type `quit` to exit
+---
 
-## Examples
-- Basic calculation: `5 + 3 * 2`  `11`
-- Scientific: Square root of 16  `4.0`
+## ⌨️ Keyboard Shortcuts
 
-## Files
-- `Calculator.py`: Main code containing `Calculator`, `ScientificCalculator`, and a simple text UI.
+| Action | Physical Key |
+| :--- | :--- |
+| **Digits & Dot** | `0` - `9` , `.` |
+| **Operators** | `+` , `-` , `*` , `/` |
+| **Brackets** | `(` , `)` |
+| **Calculate Result** | `Enter` / `Return` or `=` |
+| **Delete Last Input** | `Backspace` |
+| **Clear Display** | `Escape` |
 
-## Notes
-- The calculator uses Python's `eval` for expression evaluation in the demo. Do not pass untrusted input to `eval` in production contexts.
-- The interactive mode expects simple token-like inputs (numbers or operators). For more complex usage, extend the `CalculatorUI` parsing logic.
+---
 
-## Future Improvements
-- Safer expression evaluator (no `eval`)
-- Improved interactive input parsing
-- GUI front-end
+## 🛡️ License & Disclaimers
+This project uses Python's standard library `eval` safely caught inside robust OOP exception handlers for mathematical calculations. For production-level parsers, replace `eval` with a safe abstract syntax tree (AST) validator.
